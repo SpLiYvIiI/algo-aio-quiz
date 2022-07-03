@@ -3,7 +3,7 @@ import { MainModule } from './main.module';
 import { ValidationPipe, VersioningType } from '@nestjs/common';
 
 async function bootstrap() {
-  const app = await NestFactory.create(MainModule);
+  const app = await NestFactory.create(MainModule, { cors: true });
   app.enableVersioning({
     type: VersioningType.URI,
   });
