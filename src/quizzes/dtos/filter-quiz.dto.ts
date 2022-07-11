@@ -1,5 +1,6 @@
-import { IsEnum, IsNumber, IsOptional, Min } from 'class-validator';
+import { IsEnum, IsInt, IsNumber, IsOptional, Min } from 'class-validator';
 import { CategoryEnum, DifficultyEnum } from '../types';
+import { Type } from 'class-transformer';
 
 export class FilterQuizDto {
   @IsEnum(CategoryEnum)
@@ -10,12 +11,14 @@ export class FilterQuizDto {
   @IsOptional()
   difficulty?: DifficultyEnum;
 
-  @IsNumber()
+  @Type(() => Number)
+  @IsInt()
   @Min(0)
   @IsOptional()
   skip?: number;
 
-  @IsNumber()
+  @Type(() => Number)
+  @IsInt()
   @Min(0)
   @IsOptional()
   take?: number;

@@ -8,6 +8,6 @@ async function bootstrap() {
     type: VersioningType.URI,
   });
   app.useGlobalPipes(new ValidationPipe());
-  await app.listen(process.env.PORT || 3000);
+  await app.listen(process.env.APP_PORT || 3000);
 }
 bootstrap();

@@ -6,7 +6,7 @@ enum DifficultyEnum {
 
 enum CategoryEnum {
   SORTING = 'SORTING',
-  GRAPH_TRAVERSAL = 'GRAPH_TRAVERSAL',
+  GRAPH_TRAVERSAL = 'GRAPH-TRAVERSAL',
 }
 interface QuizInterface {
   id?: number;
