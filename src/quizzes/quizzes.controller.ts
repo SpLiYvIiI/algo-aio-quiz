@@ -6,6 +6,7 @@ import {
   Param,
   Post,
   Put,
+  Query,
   UseGuards,
 } from '@nestjs/common';
 import { CreateQuizDto } from './dtos/create-quiz.dto';
@@ -28,7 +29,7 @@ export class QuizzesController {
   }
 
   @Get('/')
-  findQuizzes(@Body() filterQuizDto: FilterQuizDto): Promise<QuizInterface[]> {
+  findQuizzes(@Query() filterQuizDto: FilterQuizDto): Promise<QuizInterface[]> {
     return this.quizzesService.findQuizzes(filterQuizDto);
   }
 

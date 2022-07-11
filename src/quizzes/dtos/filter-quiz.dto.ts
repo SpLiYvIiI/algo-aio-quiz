@@ -2,8 +2,6 @@ import {
   IsEnum,
   IsNumber,
   IsOptional,
-  IsPositive,
-  Max,
   Min,
 } from 'class-validator';
 import { CategoryEnum, DifficultyEnum } from '../types';
