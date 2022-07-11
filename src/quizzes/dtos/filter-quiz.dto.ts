@@ -1,9 +1,4 @@
-import {
-  IsEnum,
-  IsNumber,
-  IsOptional,
-  Min,
-} from 'class-validator';
+import { IsEnum, IsNumber, IsOptional, Min } from 'class-validator';
 import { CategoryEnum, DifficultyEnum } from '../types';
 
 export class FilterQuizDto {
